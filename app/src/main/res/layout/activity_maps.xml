@@ -1,0 +1,223 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context="com.example.mymapsapp.MapsActivity" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#D7CCC8"
+        android:id="@+id/container_wrapper"
+        android:isScrollContainer="true">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/quad"/>
+
+
+        <TextView
+            android:layout_margin="16dp"
+            android:text="@string/opisanie"
+            android:textColor="#5D4037"
+            android:textSize="17dp"
+            android:textStyle="italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#5D4037" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#D7CCC8"
+        android:id="@+id/container_for_textview">
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_margin="16dp"
+            android:textSize="14dp"
+            android:textColor="#5D4037"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dp"
+            android:background="#5D4037" />
+
+
+        <TextView
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:textSize="14dp"
+            android:textStyle="italic"
+            android:textColor="#5D4037"
+            android:text="КАТЕГОРИЯ ЗАВЕДЕНИЯ:"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal|center_vertical"
+                android:textAlignment="gravity"
+                android:layout_width="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_height="60dp">
+            </Spinner>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:baselineAligned="false"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:background="#795548"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:textColor="#EFEBE9"
+                android:onClick="Click_k"
+                android:text="Оптимальный путь" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:layout_height="50dp"
+                android:textColor="#EFEBE9"
+                android:background="#795548"
+                android:onClick="Click_d"
+                android:text="Минимальный путь" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="1dp"
+            android:background="#5D4037" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:baselineAligned="true"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:textSize="14dp"
+            android:textStyle="italic"
+            android:textColor="#5D4037"
+            android:text="НОМЕР ЗАВЕДЕНИЯ:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <Spinner
+            android:id="@+id/spinner_map"
+            android:layout_weight="1"
+            android:textAlignment="gravity"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
+        </Spinner>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:baselineAligned="false"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="#EFEBE9"
+            android:background="#795548"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:onClick="Click_p"
+            android:text="Полный маршрут" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="#EFEBE9"
+            android:background="#795548"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:onClick="Click_M"
+            android:text="Частичный маршрут" />
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            map:uiCompass="true"
+            map:cameraZoom="11"
+            map:uiRotateGestures="true"
+            map:uiScrollGestures="true"
+            map:uiTiltGestures="true"
+            map:uiZoomControls="true"
+            map:uiZoomGestures="true"/>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
